@@ -9,6 +9,9 @@
         app:layoutDescription="@xml/motion_scene"
         tools:context=".MainActivity">
 
+    <!-- Animation is declared inside a separate MotionScene file -->
+    <!-- app:layoutDescription="@xml/motion_scene" -->
+
     <Button
             android:id="@+id/startAnimation"
             android:layout_width="wrap_content"
@@ -19,6 +22,7 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
 
+    <!-- Width and height of this view are set inside MotionScene file -->
     <ImageView
             android:id="@+id/actor"
             app:srcCompat="@color/colorAccent"

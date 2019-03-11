@@ -10,6 +10,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // This is how we trigger our animation
         startAnimation.setOnClickListener { motionContainer.transitionToEnd() }
     }
 }

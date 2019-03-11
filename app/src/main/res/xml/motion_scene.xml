@@ -3,6 +3,8 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <!-- To set up animation we declare two ConstraintSets: starting and ending -->
+
     <ConstraintSet
             android:id="@+id/starting_set">
         <Constraint
@@ -23,6 +25,7 @@
                 android:layout_height="60dp"/>
     </ConstraintSet>
 
+    <!-- And also declare transition between these sets -->
     <Transition
             android:id="@+id/my_transition"
             app:constraintSetStart="@+id/starting_set"
