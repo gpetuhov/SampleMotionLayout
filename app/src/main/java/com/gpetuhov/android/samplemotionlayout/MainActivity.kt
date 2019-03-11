@@ -17,11 +17,15 @@ class MainActivity : AppCompatActivity() {
 
         motionContainer.setTransitionListener(object: MotionLayout.TransitionListener {
             override fun onTransitionChange(p0: MotionLayout?, p1: Int, p2: Int, p3: Float) {
+                // Show transition progress inside SeekBar
                 seekbar.progress = ceil(p3 * 100).toInt()
             }
 
             override fun onTransitionCompleted(p0: MotionLayout?, p1: Int) {
-                // Do nothing
+                if (p1 == R.id.ending_set) {
+                    // Return to original constraint set
+                    motionContainer.transitionToStart()
+                }
             }
 
             override fun onTransitionTrigger(p0: MotionLayout?, p1: Int, p2: Boolean, p3: Float) {
