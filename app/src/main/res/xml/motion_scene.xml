@@ -31,6 +31,19 @@
             app:constraintSetStart="@+id/starting_set"
             app:constraintSetEnd="@+id/ending_set"
             app:duration="2000">
+
+        <!-- We can add Key Frames to customize the transition -->
+        <!-- Key Frames must be inside KeyFrameSet -->
+        <!-- Here we add KeyPosition Key Frames -->
+
+        <KeyFrameSet
+                android:id="@+id/my_keys">
+            <KeyPosition
+                    app:target="@+id/actor"
+                    app:framePosition="30"
+                    app:keyPositionType="deltaRelative"
+                    app:percentX="0.85"/>
+        </KeyFrameSet>
     </Transition>
 
 </MotionScene>
