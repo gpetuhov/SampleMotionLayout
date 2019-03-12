@@ -68,6 +68,12 @@
                     app:waveShape="sin"
                     app:wavePeriod="1" />
         </KeyFrameSet>
+
+        <!-- Here we set click listener for our ImageView -->
+        <!-- (animation starts on ImageView click). -->
+        <OnClick
+                app:target="@+id/actor"
+                app:clickAction="transitionToEnd"/>
     </Transition>
 
 </MotionScene>
