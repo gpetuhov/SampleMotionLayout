@@ -34,7 +34,7 @@
 
         <!-- We can add Key Frames to customize the transition -->
         <!-- Key Frames must be inside KeyFrameSet -->
-        <!-- Here we add KeyPosition Key Frames -->
+        <!-- Here we add KeyPosition and KeyCycle Key Frames -->
 
         <KeyFrameSet
                 android:id="@+id/my_keys">
@@ -59,6 +59,14 @@
                     app:framePosition="80"
                     app:keyPositionType="deltaRelative"
                     app:percentX="0.5" />
+
+            <!-- Periodically rotate widget by 50 degrees -->
+            <KeyCycle
+                    app:target="@+id/actor"
+                    app:framePosition="30"
+                    android:rotation="50"
+                    app:waveShape="sin"
+                    app:wavePeriod="1" />
         </KeyFrameSet>
     </Transition>
 
