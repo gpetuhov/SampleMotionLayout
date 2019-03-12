@@ -15,6 +15,8 @@ class MainActivity : AppCompatActivity() {
         // This is how we trigger our animation
         startAnimation.setOnClickListener { motionContainer.transitionToEnd() }
 
+        // Note that ImageView click and drag listeners are set inside the motion_scene.xml file
+
         motionContainer.setTransitionListener(object: MotionLayout.TransitionListener {
             override fun onTransitionChange(p0: MotionLayout?, p1: Int, p2: Int, p3: Float) {
                 // Show transition progress inside SeekBar

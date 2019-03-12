@@ -74,6 +74,13 @@
         <OnClick
                 app:target="@+id/actor"
                 app:clickAction="transitionToEnd"/>
+
+        <!-- Here we set swipe listner for our ImageView -->
+        <!-- (animation starts if user starts to drag up above the ImageView). -->
+        <OnSwipe
+                app:touchAnchorId="@+id/actor"
+                app:touchAnchorSide="top"
+                app:dragDirection="dragUp" />
     </Transition>
 
 </MotionScene>
