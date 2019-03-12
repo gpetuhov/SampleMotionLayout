@@ -38,11 +38,27 @@
 
         <KeyFrameSet
                 android:id="@+id/my_keys">
+
+            <!-- At 30 percent of time we move at 85 percent of X axis -->
             <KeyPosition
                     app:target="@+id/actor"
                     app:framePosition="30"
                     app:keyPositionType="deltaRelative"
                     app:percentX="0.85"/>
+
+            <!-- At 60 percent of time we move at 100 percent of X axis -->
+            <KeyPosition
+                    app:target="@+id/actor"
+                    app:framePosition="60"
+                    app:keyPositionType="deltaRelative"
+                    app:percentX="1" />
+
+            <!-- At 80 percent of time we move at 50 percent of X axis -->
+            <KeyPosition
+                    app:target="@+id/actor"
+                    app:framePosition="80"
+                    app:keyPositionType="deltaRelative"
+                    app:percentX="0.5" />
         </KeyFrameSet>
     </Transition>
 
